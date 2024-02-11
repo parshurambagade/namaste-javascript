@@ -10,49 +10,50 @@ Let's break down the key concepts related to functions in JavaScript:
 
 Function statements create named functions and can be called before their declaration. Example:
 
-        `function functionName() {                 
+        function functionName() {                 
             console.log("Function statement");             
         }             
-        functionName(); // Function statement`
+        functionName(); // Function statement
+        
 
 ## Function Expression
 
 Function expressions create anonymous functions assigned to variables. They should be called after their declaration. Example:
 
-        `const funcExpression = function () {                 
+        const funcExpression = function () {                 
             console.log("Function expression");             
         };             
-        funcExpression(); // Function expression`
+        funcExpression(); // Function expression
 
 ## Anonymous Functions
 
 Functions without names, commonly used as values. Be cautious when using them, as they lack their own identity. Example:
 
-        `const anonymousFunc = function () {                 
+        const anonymousFunc = function () {                 
             console.log("Anonymous function");             
         };             
-        anonymousFunc(); // Anonymous function`
+        anonymousFunc(); // Anonymous function
 
 ## Parameters and Arguments
 
 Parameters are the function's local variables defined in the function declaration. Arguments are the values passed to a function when called.
 
-        `function sum(a, b) {                 
+        function sum(a, b) {                 
             return a + b;             
-        }             
-        console.log(sum(3, 5)); // 8`
+        }            
+        console.log(sum(3, 5)); // 8
 
 ## First-Class Functions
 
 JavaScript treats functions as first-class citizens, allowing them to be used as values, passed as arguments, and returned from other functions. Example:
 
-        `function greet() {                 
+        function greet() {                 
             return "Hello!";             
         }              
         function sayHello(func) {                 
             console.log(func());             
         }              
-        sayHello(greet); // Hello!`
+        sayHello(greet); // Hello!
 
 Stay tuned for the next topic covering callbacks and higher-order functions, crucial for learning functional programming in JavaScript.
 
