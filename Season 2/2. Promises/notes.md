@@ -26,12 +26,12 @@ Promises can be consumed using the `then()` method to attach callback functions 
 
 #### Example:
 
-    
+```javascript   
     fetch('https://api.example.com/data')
       .then(response => response.json())
       .then(data => console.log(data))
       .catch(error => console.error('Error:', error));
-    
+``` 
 
 ### Promise Chaining
 
@@ -39,13 +39,13 @@ Promise chaining allows sequential execution of asynchronous tasks by attaching 
 
 #### Example:
 
-    
+```javascript   
     createOrder()
       .then(proceedToPayment)
       .then(showOrderSummary)
       .then(updateWalletBalance)
       .catch(error => console.error('Error:', error));
-    
+```
 
 ### Creating Custom Promises
 
@@ -53,7 +53,7 @@ Developers can create their own promises using the `Promise` constructor. This e
 
 #### Example:
 
-    
+ ```javascript    
     function createOrder() {
       return new Promise((resolve, reject) => {
         // Async operation
@@ -64,7 +64,7 @@ Developers can create their own promises using the `Promise` constructor. This e
         }
       });
     }
-    
+```   
 
 Conclusion
 ----------
