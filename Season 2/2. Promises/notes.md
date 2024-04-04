@@ -7,7 +7,7 @@ Introduction to Promises
 
 Promises in JavaScript provide a way to handle asynchronous operations in a more organized and reliable manner. They address the issues of callback hell and inversion of control commonly encountered when dealing with callbacks.
 
-### Definition of a Promise
+### Definition of a Promises
 
 A promise in JavaScript is an object that represents the eventual completion of an asynchronous operation. It serves as a placeholder for a future value or the result of an async task.
 
