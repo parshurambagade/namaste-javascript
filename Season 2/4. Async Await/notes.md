@@ -16,20 +16,20 @@ Async/Await is a feature introduced in JavaScript to handle asynchronous operati
 Async/Await works by suspending the execution of an async function until promises are resolved. Behind the scenes, JavaScript manages the execution flow, allowing developers to focus on writing code without worrying about callback hell.
 
 Example:
-
+```javascript 
     async function fetchData() {
       const response = await fetch('https://api.example.com/data');
       const data = await response.json();
       console.log(data);
     }
-
+```
 3\. Handling Errors with Async/Await
 ------------------------------------
 
 Error handling in Async/Await can be done using try-catch blocks, providing a cleaner and more readable way to handle errors compared to using .catch() with promises.
 
 Example:
-
+```javascript
     async function fetchData() {
       try {
         const response = await fetch('https://api.example.com/data');
@@ -39,14 +39,14 @@ Example:
         console.error('Error fetching data:', error);
       }
     }
-
+```
 4\. Best Practices and Comparison
 ---------------------------------
 
 Async/Await is considered a syntactic sugar over promises, providing cleaner and more readable code. It is recommended to use Async/Await for handling asynchronous operations whenever possible.
 
 Example:
-
+```javascript
     async function fetchData() {
       try {
         const response = await fetch('https://api.example.com/data');
@@ -56,7 +56,7 @@ Example:
         console.error('Error fetching data:', error);
       }
     }
-
+```
 Using Async/Await:
 
     fetchData();
@@ -70,7 +70,7 @@ Using Promises:
 ## Complex examples
 
 #### Example 1: Both Awaits Resolving in 10 Seconds
-    
+ ```javascript   
     async function complexExample1() {
       try {
         console.log('Start');
@@ -83,7 +83,7 @@ Using Promises:
       }
     }
     complexExample1();
-        
+  ```      
 
 
 **Explanation:**
@@ -95,7 +95,7 @@ Using Promises:
 *   After the second 10 seconds, 'After another 10 seconds' is logged.
 
 #### Example 2: Concurrent Resolution of Promises (10 seconds)
-    
+ ```javascript   
     async function complexExample2() {
       const p1 = new Promise(resolve => setTimeout(resolve, 10000));
       const p2 = new Promise(resolve => setTimeout(resolve, 10000));
@@ -110,7 +110,7 @@ Using Promises:
       }
     }
     complexExample2();
-
+```
 **Explanation:**
 
 *   Both promises \`p1\` and \`p2\` are created simultaneously, each with a timeout of 10 seconds.
@@ -120,7 +120,7 @@ Using Promises:
 *   After the first promise is resolved, both \`await\` expressions complete concurrently, resulting in both console log statements ('After 10 seconds' and 'Instantly after the first promise is resolved') being printed almost simultaneously.
         
 #### Example 3: First Await Resolving in 10 Seconds, Second Await Resolving in 20 Seconds
-
+```javascript 
     async function complexExample1() {
       try {
         console.log('Start');
@@ -133,7 +133,7 @@ Using Promises:
       }
     }
     complexExample1();
-
+```
 **Explanation:**
 
 *   The function starts execution and logs 'Start'.
@@ -144,7 +144,7 @@ Using Promises:
 
         
 #### Example 4: Concurrent Resolution of Promises (10 seconds and 20 seconds)
-
+```javascript 
     async function complexExample2() {
       const p1 = new Promise(resolve => setTimeout(resolve, 10000));
       const p2 = new Promise(resolve => setTimeout(resolve, 20000));
@@ -159,7 +159,7 @@ Using Promises:
       }
     }
     complexExample2();
-
+```
 **Explanation:**
 
 *   Both promises \`p1\` and \`p2\` are created simultaneously, but \`p2\` has a longer timeout of 20 seconds.
@@ -170,7 +170,7 @@ Using Promises:
 
     
 #### Example 5: First Await Resolving in 20 Seconds, Second Await Resolving in 10 Seconds
-
+```javascript 
     async function complexExample1() {
       try {
         console.log('Start');
@@ -183,7 +183,7 @@ Using Promises:
       }
     }
     complexExample1();
-
+```
 **Explanation:**
 
 *   The function starts execution and logs 'Start'.
@@ -195,7 +195,7 @@ Using Promises:
         
 
 #### Example 6: First Promise Resolving in 20 Seconds, Second Promise Resolving in 10 Seconds
-
+```javascript 
     async function complexExample2() {
       const p1 = new Promise(resolve => setTimeout(resolve, 20000));
       const p2 = new Promise(resolve => setTimeout(resolve, 10000));
@@ -210,7 +210,7 @@ Using Promises:
       }
     }
     complexExample2();
-
+```
 **Explanation:**
 
 *   Both promises \`p1\` and \`p2\` are created simultaneously, with \`p1\` resolving in 20 seconds and \`p2\` resolving in 10 seconds.
