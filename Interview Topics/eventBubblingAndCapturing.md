@@ -24,7 +24,7 @@ document.getElementById("parent").addEventListener("click", function() {
 });
 ```
 
-### Event Capturing (Top-Down)
+### Event Capturing/Trickling (Top-Down)
 
 - **Process**: Event capturing is the opposite of event bubbling. The event is first captured at the highest level, and it is then propagated down to the target element.
 - **Example**: Using the same structure as above, the event would first trigger an event handler on the root element and then fire handlers as it propagates down to the target.
@@ -39,6 +39,14 @@ document.getElementById("child").addEventListener("click", function() {
     console.log("Child clicked!");
 }, true);
 ```
+### Third parameter in `addEventListener`
+
+The third parameter in `addEventListener` determines the event phase:
+
+- `true`: Capturing phase 
+- `false` or omitted: Bubbling phase 
+
+This parameter controls when the event handler is executed during event propagation, allowing developers to specify the desired phase for handling events.
 
 ### Stopping Event Propagation
 
